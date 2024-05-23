@@ -1,16 +1,18 @@
 import {Component} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
+import { HeaderComponent } from './features/header/header.component';
+import { FooterComponent } from './features/footer/footer.component';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  template: `
-    <h1>Welcome to {{ title }}!</h1>
-
+    selector: 'app-root',
+    standalone: true,
+    template: `
+    <app-header/>
     <router-outlet/>
+    <app-footer/>
   `,
-  styles: [],
+    styles: [],
+    imports: [RouterOutlet, HeaderComponent, FooterComponent]
 })
 export class AppComponent {
   title = 'USity project';

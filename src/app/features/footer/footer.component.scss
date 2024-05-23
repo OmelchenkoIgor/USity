@@ -1,0 +1,25 @@
+.wrapper {
+    height: 100px;
+
+    padding: 15px 50px;
+
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--white-color);
+
+    .container {    
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+        gap: 40px;
+        
+        .item {
+            p {
+                margin: 0;
+                color: var(--black-color);
+            }
+        }
+    }   
+}

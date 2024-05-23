@@ -1,4 +1,13 @@
+:root {
+  --black-color: #1E1E1E;
+  --black-hover-color: #1e1e1e7c;
+  --white-color: #F6F9FA;
+}
+
+
 body, html {
   padding: 0;
   margin: 0;
+
+  font-family:  system-ui;
 }

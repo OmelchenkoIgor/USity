@@ -1,0 +1,62 @@
+<div class="wrapper">
+    <div class="logo">
+        <img src="../../../assets/logo.svg">
+    </div>
+
+    <div class="navigation">
+        <div class="item">
+            <p>Акції та пропозиції</p>
+        </div>
+
+        <div class="item">
+            <p>Б'юті індустрія</p>
+        </div>
+
+        <div class="item">
+            <p>Право</p>
+        </div>
+
+        <div class="item">
+            <p>Заклади<p>
+        </div>
+
+        <div class="item">
+            <p>Підприємства</p>
+        </div>
+
+        <div class="item">
+            <p>Майстри</p>
+        </div>
+
+        <div class="item">
+            <p>Розваги</p>
+        </div>
+
+        <div class="item">
+            <p>Довідник</p>
+        </div>
+
+        <div class="item">
+            <p>Співпраця</p>
+        </div>
+    </div>
+
+    <div class="burger-menu">
+        <div class="burger-menu" (click)="toggleMenu()">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <ul [class.active]="menuActive">
+            <li><p>Акції та пропозиції</p></li>
+            <li><p>Б'юті індустрія</p></li>
+            <li><p>Право</p></li>
+            <li><p>Заклади</p></li>
+            <li><p>Підприємства</p></li>
+            <li><p>Майстри</p></li>
+            <li><p>Розваги</p></li>
+            <li><p>Довідник</p></li>
+            <li><p>Співпраця</p></li>
+          </ul>
+    </div>
+</div>
