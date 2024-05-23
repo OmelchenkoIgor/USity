@@ -8,18 +8,40 @@
 
     background-color: var(--white-color);
 
-    .container {    
+    .container {
         display: flex;
         flex-direction: row;
         align-items: center;
-        
+
         gap: 40px;
-        
+        @media screen and (max-width: 1200px) {
+            gap: 20px;
+            .hide {
+                display: none;
+            }
+        }
+
         .item {
             p {
                 margin: 0;
                 color: var(--black-color);
+
+                user-select: none;
+            }
+            .hover:hover {
+                color: var(--black-hover-color);
+
+                cursor: pointer;
+            }
+
+            .container2 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                gap: 5px;
             }
         }
-    }   
+
+    }
 }
