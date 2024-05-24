@@ -15,7 +15,7 @@
         p {
             margin: 0;
             font-size: 18px;
-            
+
             cursor: pointer;
             color: var(--black-color);
         }
@@ -44,16 +44,16 @@
             cursor: pointer;
 
             .line {
-                width: 20px;
-                height: 2px;
+                width: 30px;
+                height: 3px;
 
                 background-color: var(--black-color);
             }
-        
-      
+
+
           ul {
             padding: 0;
-            
+
             display: none;
             flex-direction: column;
             position: absolute;
@@ -61,7 +61,7 @@
             left: 0;
             right: 0;
             background-color: #333;
-      
+
             li {
                 list-style: none;
               text-align: center;
@@ -75,7 +75,7 @@
                 background-color: #888888;
             }
           }
-      
+
           ul.active {
             display: flex;
           }
