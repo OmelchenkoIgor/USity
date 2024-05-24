@@ -1,5 +1,5 @@
 .wrapper {
-    height: 100px;
+    height: max-content;
 
     padding: 15px 50px;
 
@@ -54,5 +54,10 @@
 
         gap: 5px;
     }
+}
 
+@media screen and (max-width: 765px) {
+    .wrapper {
+        padding: 10px 15px;
+    }
 }
