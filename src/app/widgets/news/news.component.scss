@@ -1,0 +1,66 @@
+.wrapper {
+    .title {
+        p {
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--black-color);
+        }
+    }
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+
+        .card {
+            max-width: 300px;
+
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .picture {
+                img {
+                    width: 100%;
+                }
+            }
+
+            .news-title {
+                p {
+                    font-size: 20px;
+                    color: var(--black-color);
+
+                    margin: 0;
+                }
+            }
+
+            .extra {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap:16px;
+
+                margin-bottom: 16px;
+
+                .extra-icon {
+                    display: flex;
+                    img {
+                        width: 16px;
+                    }
+                }
+
+                .extra-text {
+                    p {
+                        font-size: 16px;
+                        color: var(--black-color);
+
+                        margin: 0;
+                    }
+                }
+
+            }
+        }
+    }
+}
