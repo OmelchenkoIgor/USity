@@ -1,0 +1,33 @@
+.container {
+    height: 100%;
+    width: 100%;
+
+    margin: 56px 60px
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 40px;
+
+    @media screen and (max-width: 1440px) {
+        .item4 {
+            display: none;
+        }
+
+        @media screen and (max-width: 1024px) {
+            .item3 {
+                display: none;
+            }
+
+            @media screen and (max-width: 390px) {
+                flex-direction: column;
+
+                gap: 0;
+            }
+        }
+    }
+}
