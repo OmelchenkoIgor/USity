@@ -5,8 +5,6 @@ export const routes: Routes = [
         path: 'home',
         loadComponent: () => import('./pages/home/home.component')
     },
-
-    
     {
         path: 'barber-shops',
         loadComponent: () => import('./pages/categories/categories.component')
@@ -19,8 +17,6 @@ export const routes: Routes = [
         path: 'restaurants',
         loadComponent: () => import('./pages/categories/categories.component')
     },
-
-
     {
         path: '',
         redirectTo: '/home',
