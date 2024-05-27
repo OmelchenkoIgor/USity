@@ -19,7 +19,10 @@
             font-size: 16px;
             color: var(--black-color);
             a {
+                font-size: 16px;
                 color: var(--purple-color);
+
+                cursor: pointer;
             }
         }
     }
