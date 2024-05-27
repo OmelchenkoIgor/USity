@@ -1,10 +1,16 @@
 .card {
     display: flex;
     gap: 20px;
-    
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid;
+
     .pictures {
         width: 30%;
         min-width: 320px;
+
+        display: flex;
+        flex: 1;
 
         img {
             width: 100%;
@@ -17,12 +23,18 @@
     .info {
         width: 100%;
 
-        &_description {    
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 2;
+
+        &_description {
+
             p {
                 color: var(--black-color);
             }
-            
-            p:nth-child(1) {    
+
+            p:nth-child(1) {
                font-size: 24px;
             }
 
@@ -31,7 +43,7 @@
                 color: var(--gray-color);
                 padding-bottom: 46px;
             }
-            
+
             p:nth-child(3) {
                 font-size: 14px;
             }
@@ -41,6 +53,7 @@
             display: flex;
             flex-direction: column;
             gap: 5px;
+            margin-right: 20px;
 
             .suggestion {
                 width: 100%;
@@ -67,7 +80,7 @@
                     display: flex;
                     flex: 1;
                     gap: 20px;
-                    
+
                     p {
                         font-size: 14px;
                         color: var(--black-color);
@@ -107,6 +120,12 @@
         }
 
         .info {
+            &_description {
+                p:nth-child(2) {
+                    font-size: 20px;
+                }
+            }
+
             &_suggestions {
                 .suggestion {
                     .name {
