@@ -3,7 +3,7 @@ import { BannerComponent } from '../../widgets/banner/banner.component';
 import { RecomendationsComponent } from '../../widgets/recomendations/recomendations.component';
 import { NewsComponent } from '../../widgets/news/news.component';
 import { RelevantComponent } from '../../widgets/relevant/relevant.component';
-import { AdvertisementComponent } from '../../widgets/advertisement/advertisement.component';
+import { AnnouncementComponent } from '../../widgets/announcement/announcement.component';
 
 @Component({
     selector: 'app-home',
@@ -15,7 +15,7 @@ import { AdvertisementComponent } from '../../widgets/advertisement/advertisemen
         RecomendationsComponent,
         NewsComponent,
         RelevantComponent,
-        AdvertisementComponent
+        AnnouncementComponent
     ]
 })
 export default class HomeComponent {
