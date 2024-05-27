@@ -1,0 +1,26 @@
+.wrapper {
+    margin: 84px 45px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .title {
+        p {
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--black-color);
+            margin: 0;
+        }
+    }
+
+    .info {
+        p {
+            font-size: 16px;
+            color: var(--black-color);
+            a {
+                color: var(--purple-color);
+            }
+        }
+    }
+}
