@@ -6,6 +6,7 @@
 
     .categories {
         display: flex;
+        flex-wrap: wrap;
         gap: 1px;
 
         background-color: var(--white-color);

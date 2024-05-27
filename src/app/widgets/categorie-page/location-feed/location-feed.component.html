@@ -1,0 +1,5 @@
+<div class="location-feed">
+    @for (item of locationsList(); track $index) {
+        <app-card [data]='item'></app-card>
+    }
+</div>

@@ -1,0 +1,36 @@
+<div class="card">
+    <div class="pictures">
+        <img [src]='data().image[0]'>
+    </div>
+    <div class="info">
+        <div class="info_description">
+            <p>{{data().title}}</p>
+            <p>{{data().type}}</p>
+            <p>{{data().locations}}</p>
+        </div>
+
+        @if (data().suggestions) {
+            <div class="info_suggestions" >
+                @for (item of data().suggestions; track $index) {
+                    <div class="suggestion">
+                        <div class="name">
+                            <p>{{item.name}}</p>
+                        </div>
+                        
+                        <div class="prices">
+                            <p>{{item.price}}</p>
+                            <p>|</p> 
+                            <p>{{item.volume}}</p>
+                        </div>
+                        
+                        <div class="action">
+                            <button>
+                                {{ data().type === "Кав'ярня" ? "Замовити" : "Записатись" }}
+                            </button>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
