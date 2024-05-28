@@ -3,15 +3,16 @@ import { Injectable, inject } from "@angular/core";
 import { Observable } from "rxjs";
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
 
 export class locationsService {
-    private http: HttpClient = inject(HttpClient);
+  private http: HttpClient = inject(HttpClient);
 
-    private url = 'https://test-server-lovat.vercel.app';
+  private url = 'https://test-server-lovat.vercel.app';
 
     getLocationList(type: string): Observable<any> {
-        return this.http.get(this.url + '/' + type);
+      console.log(this.url + '/api/type/' + type);
+      return this.http.get(this.url + '/api/type/' + type);
     }
 }

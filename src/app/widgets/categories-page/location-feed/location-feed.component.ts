@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, WritableSignal, effect, inject, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, WritableSignal, effect, inject, signal } from '@angular/core';
 import { CardComponent } from './ui/card/card.component';
 import { locationsService } from './api/locations.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-location-feed',
@@ -12,15 +13,17 @@ import { locationsService } from './api/locations.service';
   styleUrl: 'location-feed.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LocationFeedComponent {
+export class LocationFeedComponent implements OnInit {
+
   private locationsService: locationsService = inject(locationsService);
 
-  typelocation: WritableSignal<string> = signal('api');
+  private route: ActivatedRoute = inject(ActivatedRoute);
+
+  typelocation: WritableSignal<string> = signal('all');
   locationsList: WritableSignal<any> = signal(null);
 
   constructor() {
     effect( () => {
-
       if(this.typelocation()) {
         this.locationsService.getLocationList(this.typelocation()).subscribe(
           response => {
@@ -29,8 +32,14 @@ export class LocationFeedComponent {
           }
         )
       }
-
     })
+  }
+
+  ngOnInit(): void {
+    this.route.url.subscribe(url => {
+      const path = url[0]?.path;
+      this.typelocation.set(path);
+     });
   }
 
 }
