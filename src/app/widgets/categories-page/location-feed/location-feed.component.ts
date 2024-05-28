@@ -38,7 +38,9 @@ export class LocationFeedComponent implements OnInit {
   ngOnInit(): void {
     this.route.url.subscribe(url => {
       const path = url[0]?.path;
-      this.typelocation.set(path);
+      if ( path != "categories" ) {
+        this.typelocation.set(path);
+      }
      });
   }
 
