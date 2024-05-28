@@ -13,10 +13,25 @@ import {LocationFeedComponent} from '../../widgets/categories-page/location-feed
 export default class CategoriesComponent implements OnInit {
   private route: ActivatedRoute = inject(ActivatedRoute);
 
+  title: string = 'Цікаві локації';
+
   ngOnInit(): void {
    this.route.url.subscribe(url => {
     const path = url[0]?.path;
-    console.log('Current route path:', path);
+
+    switch (path) {
+      case 'barber-shops':
+        this.title = 'Барбершопи';
+        break;
+      case 'coffee-shops':
+        this.title = 'Кав\'ярні';
+        break;
+      case 'restaurants':
+        this.title = 'Ресторани';
+        break;
+      default:
+        this.title = 'Цікаві локації';
+    }
    });
   }
 }
