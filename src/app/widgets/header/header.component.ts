@@ -8,6 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: 'header.component.scss'
 })
 export class HeaderComponent {
+  changeRoute(route: string) {
+    window.location.href = route;
+  }
   menuActive = false;
 
   toggleMenu() {

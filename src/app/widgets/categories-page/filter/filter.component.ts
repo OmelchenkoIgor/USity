@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: 'filter.component.scss'
 })
 export class FilterComponent {
-
+  changeRoute(path: string) {
+    window.location.href = path;
+  }
 }

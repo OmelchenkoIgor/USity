@@ -1,5 +1,5 @@
 <div class="wrapper">
-    <div class="logo">
+    <div class="logo" (click)="changeRoute('/home')">
         <img src="../../../assets/logo.svg">
     </div>
 
@@ -16,7 +16,7 @@
             <p>Право</p>
         </div>
 
-        <div class="item">
+        <div class="item" (click)="changeRoute('/categories')">
             <p>Заклади<p>
         </div>
 
@@ -51,7 +51,7 @@
             <li><p>Акції та пропозиції</p></li>
             <li><p>Б'юті індустрія</p></li>
             <li><p>Право</p></li>
-            <li><p>Заклади</p></li>
+            <li (click)="changeRoute('/categories')"><p>Заклади</p></li>
             <li><p>Підприємства</p></li>
             <li><p>Майстри</p></li>
             <li><p>Розваги</p></li>
