@@ -1,47 +1,38 @@
-import { ChangeDetectionStrategy, Component, OnInit, WritableSignal, effect, inject, signal } from '@angular/core';
-import { CardComponent } from './ui/card/card.component';
-import { locationsService } from './api/locations.service';
-import { ActivatedRoute } from '@angular/router';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  WritableSignal,
+  effect,
+  inject,
+  signal,
+  input,
+  InputSignal
+} from '@angular/core';
+import {CardComponent} from './ui/card/card.component';
+import {locationsService} from './api/locations.service';
+import {currentCategory} from '../../../shared/utils/currentCategory';
 
 @Component({
   selector: 'app-location-feed',
   standalone: true,
-  imports: [
-    CardComponent
-  ],
+  imports: [CardComponent],
   templateUrl: 'location-feed.component.html',
   styleUrl: 'location-feed.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LocationFeedComponent implements OnInit {
-
+export class LocationFeedComponent {
   private locationsService: locationsService = inject(locationsService);
+  index: InputSignal<number> = input.required();
 
-  private route: ActivatedRoute = inject(ActivatedRoute);
-
-  typelocation: WritableSignal<string> = signal('all');
   locationsList: WritableSignal<any> = signal(null);
 
   constructor() {
-    effect( () => {
-      if(this.typelocation()) {
-        this.locationsService.getLocationList(this.typelocation()).subscribe(
-          response => {
-            console.log(response);
-            this.locationsList.set(response);
-          }
-        )
-      }
+    effect(() => {
+      this.locationsService.getLocationList(currentCategory(this.index())).subscribe(
+        response => {
+          this.locationsList.set(response);
+        }
+      )
     })
   }
-
-  ngOnInit(): void {
-    this.route.url.subscribe(url => {
-      const path = url[0]?.path;
-      if ( path != "categories" ) {
-        this.typelocation.set(path);
-      }
-     });
-  }
-
 }

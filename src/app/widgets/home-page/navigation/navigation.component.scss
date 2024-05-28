@@ -1,20 +1,32 @@
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
 
     cursor: pointer;
 
     .item {
+        width: 72px;
+
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: 25px;
+        align-items: center;
+        gap: 15px;
 
         .icon {
+            width: 72px;
+            height: 72px;
+
             display: flex;
             justify-content: center;
+
+            border-radius: 15px;
+
+            background-color: var(--white-color);
+
             img {
                 width: 34px;
             }
@@ -25,28 +37,13 @@
                 margin: 0;
 
                 font-size: 12px;
+                font-weight: 500;
                 color: var(--black-color);
-
-                user-select: none;
             }
         }
     }
 }
 
-@media screen and (min-width: 1200px){
-    .wrapper {
-        display: none;
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .wrapper {
-        .item:nth-child(5) {
-            display: none;
-        }
-        .item:nth-child(6) {
-            display: none;
-        }
-    }
 
 }

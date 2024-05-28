@@ -1,14 +1,17 @@
-import { Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Output, output} from '@angular/core';
+import {NzSegmentedComponent} from 'ng-zorro-antd/segmented';
 
 @Component({
   selector: 'app-filter',
   standalone: true,
-  imports: [],
+  imports: [
+    NzSegmentedComponent
+  ],
   templateUrl: 'filter.component.html',
-  styleUrl: 'filter.component.scss'
+  styleUrl: 'filter.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FilterComponent {
-  changeRoute(path: string) {
-    window.location.href = path;
-  }
+  @Output() selectedCategory: EventEmitter<number>  = new EventEmitter<number>();
+  category: string[] = ['Всі', 'Ресторани', 'Кав`ярні', 'Барбершопи'];
 }

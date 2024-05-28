@@ -10,18 +10,6 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/categories/categories.component')
     },
     {
-        path: 'barber-shops',
-        loadComponent: () => import('./pages/categories/categories.component')
-    },
-    {
-        path: 'coffee-shops',
-        loadComponent: () => import('./pages/categories/categories.component')
-    },
-    {
-        path: 'restaurants',
-        loadComponent: () => import('./pages/categories/categories.component')
-    },
-    {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'

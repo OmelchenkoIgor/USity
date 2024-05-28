@@ -4,11 +4,11 @@
     </div>
 
     <div class="filter">
-        <app-filter></app-filter>
+        <app-filter (selectedCategory)="indexCategory.set($event)"></app-filter>
     </div>
 
     <div class="content">
-        <app-location-feed></app-location-feed>
+        <app-location-feed [index]="indexCategory()"></app-location-feed>
     </div>
 
     <div class="info">
