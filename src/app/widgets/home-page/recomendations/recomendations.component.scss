@@ -46,6 +46,25 @@
                     }
                 }
 
+                .review {
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+
+                    .rating {
+                        p {
+                            font-size: 14px;
+                            color: var(--black-color);
+                        }
+                    }
+                    .review-number {
+                        p {
+                            font-size: 14px;
+                            color: var(--gray-color);
+                        }
+                    }
+                }
+
                 .latest-review {
                     padding: 10px 18px;
 
