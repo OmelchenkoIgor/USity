@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import {FilterComponent} from '../../widgets/categorie-page/filter/filter.component';
-import {LocationFeedComponent} from '../../widgets/categorie-page/location-feed/location-feed.component';
+import {FilterComponent} from '../../widgets/categories-page/filter/filter.component';
+import {LocationFeedComponent} from '../../widgets/categories-page/location-feed/location-feed.component';
 
 @Component({
     selector: 'app-categories',
