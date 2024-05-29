@@ -1,0 +1,30 @@
+.wrapper {
+    padding: 64px 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .about {
+        p {
+            margin: 0;
+        }
+        p:first-child {
+            font-size: 36px;
+            font-weight: 600;
+            color: var(--black-color);
+
+            margin-bottom: 20px;
+        }
+        p:nth-child(2) {
+            font-size: 20px;
+            color: var(--gray-color);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        padding: 64px 16px;
+    }
+}

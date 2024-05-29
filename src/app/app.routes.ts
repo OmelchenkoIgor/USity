@@ -10,6 +10,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/categories/categories.component')
     },
     {
+        path: 'partnership',
+        loadComponent: () => import('./pages/partnership/partnership.component')
+    },
+    {
         path: 'error404',
         loadComponent: () => import('./pages/error404/error404.component')
     },
