@@ -1,0 +1,77 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 71px;
+
+    padding: 60px 20px;
+
+    color: var(--white-color);
+    background-color: var(--purple-color);
+
+    .title {
+        p {
+            margin: 0;
+
+            font-size: 26px;
+            font-weight: 600;
+        }
+    }
+
+    .statement {
+        p {
+            margin: 0;
+
+            font-size: 20px;
+            font-weight: 300;
+            color: var(--blue-gray-color);
+        }
+    }
+
+    .review {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+
+        .stars {
+            display: flex;
+            gap: 7px;
+
+            img {
+                width: 22px;
+            }
+        }
+        .opinion {
+            p {
+                margin: 0;
+
+                font-size: 16px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .review-author {
+        display: flex;
+        gap: 13px;
+
+        .picture {
+            width: 41px;
+
+            img {
+                width: 100%;
+                border-radius: 100px;
+            }
+        }
+
+        .name {
+            display: flex;
+            align-items: center;
+            p {
+                margin: 0;
+
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+}

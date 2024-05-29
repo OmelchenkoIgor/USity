@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        p {
+            margin: 0;
+        }
+        p:first-child {
+            font-size: 26px;
+            color: var(--black-color);
+        }
+        p:last-child {
+            font-size: 16px;
+            color: var(--dark-gray-color);
+        }
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+
+            label {
+                font-size: 16px;
+                color: var(--black-color);
+            }
+            input {
+                width: 100%;
+                max-width: 720px;
+                height: 60px;
+
+                border-radius: 12px;
+                border: 1px solid var(--light-gray-color);
+            }
+            input:focus {
+                border: 1px solid var(--purple-color);
+            }
+        }
+    }
+}
