@@ -10,12 +10,16 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/categories/categories.component')
     },
     {
+        path: 'error404',
+        loadComponent: () => import('./pages/error404/error404.component')
+    },
+    {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
     },
     {
         path: '**',
-        redirectTo: '/home'
+        redirectTo: '/error404'
     }
 ];
