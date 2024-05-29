@@ -21,10 +21,22 @@
             color: var(--gray-color);
         }
     }
+
+    .announcement {
+        margin: 0px -32px;
+        padding: 0px 32px;
+
+        background-color: var(--purple-color);
+    }
 }
 
 @media screen and (max-width: 768px) {
     .wrapper {
         padding: 64px 16px;
+
+        .announcement {
+            margin: 0px -16px;
+            padding: 0px 16px;
+        }
     }
 }
