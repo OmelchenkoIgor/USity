@@ -1,16 +1,20 @@
 <div class="location-feed">
     @for (item of locationsList(); track $index) {
-        <app-card 
+        <app-card
             [data]='item'
             >
         </app-card>
     }
 </div>
 
-<nz-pagination 
-    [nzPageIndex]="this.page()"
-    [nzTotal]="30"
+<div class="pagination">
+    <nz-pagination
+        [nzSize]="'default'"
+        [nzPageIndex]="this.page()"
+        [nzTotal]="totalCount()"
+        [nzPageSize]="4"
+        (nzPageIndexChange)="changePages($event)"
+    >
+    </nz-pagination>
+</div>
 
-    (nzPageIndexChange)="changePages($event)"
->
-</nz-pagination>

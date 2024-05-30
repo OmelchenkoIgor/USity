@@ -25,16 +25,16 @@ export class LocationFeedComponent implements OnInit {
   private route: ActivatedRoute = inject(ActivatedRoute);
 
   page: WritableSignal<number> = signal(1);
-
   locationsList: WritableSignal<any> = signal(null);
-
   category: WritableSignal<string> = signal('');
+  totalCount: WritableSignal<number> = signal(0);
 
   constructor() {
     effect(() => {
       this.locationsService.getLocationList(this.category(), this.page()).subscribe(
         response => {
-          this.locationsList.set(response);
+          this.locationsList.set(response['establishments']);
+          this.totalCount.set(response['totalCount'])
         }
       )
     })

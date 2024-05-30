@@ -1,7 +1,68 @@
 .location-feed {
+    margin-bottom: 20px;
+
     display: flex;
     flex-direction: column;
     gap: 30px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+
+    nz-pagination {
+        ::ng-deep .ng-star-inserted {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ::ng-deep
+        .ant-pagination-item,
+        .ant-pagination-item-link {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            justify-content: center;
+
+            background-color: #fff;
+            border-radius: 10px;
+            border: none;
+
+            font-size: 20px;
+
+            &:hover {
+                background-color: #F9F5FF;
+            }
+        }
+
+        ::ng-deep
+        .ant-pagination-item-active {
+            background-color: #F9F5FF;
+        }
+
+        ::ng-deep
+        .ng-star-inserted {
+            color: #7F56D9;
+        }
+
+        ::ng-deep
+        .ant-pagination-prev {
+            button {
+                background-color: #fff;
+                border: none;
+            }
+        }
+
+        ::ng-deep
+        .ant-pagination-next {
+            button {
+                background-color: #fff;
+                border: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 756px) {
