@@ -1,34 +1,35 @@
-import {ChangeDetectionStrategy, Component, EventEmitter, Output, effect, inject} from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output, effect, inject} from '@angular/core';
 import {NzSegmentedComponent} from 'ng-zorro-antd/segmented';
 import { ActivatedRoute, Router } from '@angular/router';
-import { currentCategory } from '../../../shared/utils/currentCategory';
+import { currentCategoryIndex, currentCategoryName } from '../../../shared/utils/currentCategory';
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-filter',
   standalone: true,
   imports: [
+    FormsModule,
     NzSegmentedComponent
   ],
   templateUrl: 'filter.component.html',
   styleUrl: 'filter.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FilterComponent {
+export class FilterComponent implements OnInit {
   private router: Router = inject(Router);
   private route: ActivatedRoute = inject(ActivatedRoute);
-
-  @Output() selectedCategory: EventEmitter<number>  = new EventEmitter<number>();
-  category: string[] = ['Всі', 'Ресторани', 'Кав`ярні', 'Барбершопи'];
+  
+  categoryIndex = 1;
+  category: string = '';
+  categoryNames: string[] = ['Всі', 'Ресторани', 'Кав`ярні', 'Барбершопи'];
 
   navigateToCategory(index: number) {
-    this.router.navigate(['./categories'], { queryParams: { category: currentCategory(index) } });
+    this.router.navigate(['./categories'], { queryParams: { category: currentCategoryName(index) } });
   }
-
-  constructor() {
-    effect(() => {
-       this.route.queryParams.subscribe((params: any) => {
-        this.category = params['category'] || '';
-        console.log(this.category);
-      })
+  
+  ngOnInit(): void {
+    this.route.queryParams.subscribe((params: any) => {
+      this.category = params['category'] || '';
+      this.categoryIndex = currentCategoryIndex(this.category);
     })
   }
 }

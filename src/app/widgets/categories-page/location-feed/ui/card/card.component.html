@@ -4,7 +4,11 @@
     </div>
     <div class="info">
         <div class="info_description">
-            <p>{{data().title}}</p>
+            <p
+                (click)="redirectToLocation(data()._id)"
+            >
+                {{data().title}}
+            </p>
             <p>{{data().type}}</p>
             <p>{{data().locations}}</p>
         </div>

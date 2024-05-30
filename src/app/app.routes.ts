@@ -14,6 +14,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/partnership/partnership.component')
     },
     {
+        path: 'location/:id',
+        loadComponent: () => import('./pages/location/location.component')
+    },
+    {
         path: 'error404',
         loadComponent: () => import('./pages/error404/error404.component')
     },

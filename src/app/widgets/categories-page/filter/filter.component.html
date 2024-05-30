@@ -1,7 +1,8 @@
 <div class="wrapper">
     <div class="categories">
         <nz-segmented
-            [nzOptions]="category"
+            [nzOptions]="categoryNames"
+            [(ngModel)]="categoryIndex"
             (nzValueChange)="navigateToCategory($event)"
         ></nz-segmented>
     </div>

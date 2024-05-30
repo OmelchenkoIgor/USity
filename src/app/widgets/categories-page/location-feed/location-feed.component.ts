@@ -5,15 +5,11 @@ import {
   effect,
   inject,
   signal,
-  input,
-  InputSignal,
-  untracked,
   OnInit
 } from '@angular/core';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import {CardComponent} from './ui/card/card.component';
 import {locationsService} from './api/locations.service';
-import {currentCategory} from '../../../shared/utils/currentCategory';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -24,55 +20,33 @@ import { ActivatedRoute } from '@angular/router';
   styleUrl: 'location-feed.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LocationFeedComponent {
+export class LocationFeedComponent implements OnInit {
   private locationsService: locationsService = inject(locationsService);
   private route: ActivatedRoute = inject(ActivatedRoute);
 
-  index: InputSignal<number> = input.required();
   page: WritableSignal<number> = signal(1);
 
   locationsList: WritableSignal<any> = signal(null);
 
-  category: any = [];
+  category: WritableSignal<string> = signal('');
 
   constructor() {
     effect(() => {
-      if(this.index()) {
-       
-        untracked(() => {
-          this.page.set(1);
-        })
-       
-        console.log(this.page());
-      }
+      this.locationsService.getLocationList(this.category(), this.page()).subscribe(
+        response => {
+          this.locationsList.set(response);
+        }
+      )
     })
+  }
 
-    effect(() => {
-      this.route.queryParams.subscribe(params => {
-        this.category = params['category'] || '';
-        console.log(this.category);
-  
-  
-        this.locationsService.getLocationList(this.category, this.page()).subscribe(
-          response => {
-            this.locationsList.set(response);
-          }
-        )
-  
-  
-        // this.displayProductsData = [];
-  
-        // if (this.filter != '') {
-        //   for (let i = 0; i < this.productsData.length; i++) {
-        //     if (this.productsData[i].type === this.filter) {
-        //       this.displayProductsData.push(this.productsData[i]);
-        //     }
-        //   }
-        // } else {
-        //   this.displayProductsData = this.productsData;
-        // }
-      });
-    })
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.category.set(params['category'])
+      console.log(this.category());
+
+      this.page.set(1);
+    });
   }
 
   changePages(indexPage: number) {
