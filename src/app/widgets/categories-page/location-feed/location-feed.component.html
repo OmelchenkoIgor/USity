@@ -3,3 +3,11 @@
         <app-card [data]='item'></app-card>
     }
 </div>
+
+<nz-pagination 
+    [nzPageIndex]="this.page()"
+    [nzTotal]="20"
+
+    (nzPageIndexChange)="changePages($event)"
+>
+</nz-pagination>

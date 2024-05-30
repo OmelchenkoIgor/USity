@@ -2,7 +2,7 @@
     <div class="categories">
         <nz-segmented
             [nzOptions]="category"
-            (nzValueChange)="selectedCategory.emit($event)"
+            (nzValueChange)="navigateToCategory($event)"
         ></nz-segmented>
     </div>
 </div>

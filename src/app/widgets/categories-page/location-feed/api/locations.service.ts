@@ -11,7 +11,7 @@ export class locationsService {
 
   private url = 'https://test-server-lovat.vercel.app';
 
-    getLocationList(type: string): Observable<any> {
-      return this.http.get(this.url + '/api/type/' + type);
+    getLocationList(type: string, page: number): Observable<any> {
+      return this.http.get(this.url + '/api/type/' + type + '/' + page );
     }
 }
