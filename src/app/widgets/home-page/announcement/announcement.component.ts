@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: 'announcement.component.scss'
 })
 export class AnnouncementComponent {
+  redirectTo(url: string) {
+    window.location.href = url;
+  }
 
 }
