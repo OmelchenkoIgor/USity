@@ -47,4 +47,123 @@
             }
         }
     }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        max-width: 720px;
+        max-width: 720px;
+
+        .form-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .minor-actions {
+                display: flex;
+                justify-content: space-between;
+
+
+                .remember-me {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    input {
+                        width: 20px;
+                        height: 20px;
+
+                        border: 1px solid var(--light-gray-color);
+                        border-radius: 5px;
+
+                        cursor: pointer;
+                    }
+                    label {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--black-color);
+                    }
+                }
+                .forgot-password {
+                    p {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--purple-color);
+
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .submit {
+                button {
+                    width: 100%;
+                    max-width: 720px;
+                    height: 64px;
+
+                    font-size: 14px;
+                    color: var(--white-color);
+
+                    border: none;
+                    border-radius: 10px;
+                    background-color: var(--purple-color);
+
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+        }
+
+        .auth-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 52px;
+
+            .google-auth {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    padding: 10px 15px;
+
+                    border: none;
+                    background-color: rgba($color: #FFFFFF, $alpha: 0);
+
+                    .picture {
+                        width: 24px;
+                        height: 24px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .title {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--black-color);
+                    }
+                }
+            }
+            .register {
+                p {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--dark-gray-color);
+
+                    span {
+                        color: var(--purple-color);
+
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
 }
