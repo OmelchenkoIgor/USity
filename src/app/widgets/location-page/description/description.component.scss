@@ -1,0 +1,20 @@
+.wrapper {
+    padding: 14px 0px;
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        p {
+            margin: 0;
+            color: var(--black-color);
+        }
+        p:first-child {
+            font-size: 24px;
+        }
+        p:last-child {
+            font-size: 16px;
+        }
+    }
+}
