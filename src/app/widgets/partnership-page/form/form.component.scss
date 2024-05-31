@@ -112,6 +112,10 @@
                     cursor: pointer;
                     user-select: none;
                 }
+                button:hover {
+                    transition: 0.2s;
+                    background-color: var(--purple-hover-color);
+                }
             }
         }
 
