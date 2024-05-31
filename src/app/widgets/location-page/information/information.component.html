@@ -1,0 +1,40 @@
+<div class="wrapper">
+    <div class="info">
+        <div class="name">
+            <p>{{this.location.title}}</p>
+        </div>
+        <div class="extra">
+            <p>5 <span>(11 відгуків)</span></p>
+            <p>{{this.location.type}}</p>
+        </div>
+    </div>
+
+    <div class="pictures">
+        <div class="picture">
+            <img [src]="this.location.image[0]" alt="картинка {{this.location.type}} така типу">
+        </div>
+    </div>
+
+    <div class="description">
+        <div class="schedule">
+            <div class="title">
+                <p>Графік роботи</p>
+            </div>
+            <div class="data">
+                <p>09:00-21:00</p>
+                <p>Зачинено</p>
+            </div>
+        </div>
+        <div class="address">
+            <div>
+                <p>Адреса</p>
+            </div>
+            <div>
+                <p>+38 (098) 884-2333</p>
+            </div>
+            <div>
+                <p>{{this.location.locations}}</p>
+            </div>
+        </div>
+    </div>
+</div>

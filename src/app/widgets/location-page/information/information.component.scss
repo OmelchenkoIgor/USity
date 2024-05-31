@@ -1,0 +1,111 @@
+.wrapper {
+    // * {
+    //     outline: 1px red solid;
+    // }
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+        margin: 0;
+        color: var(--black-color);
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .name {
+            p {
+                font-size: 32px;
+                font-weight: 300;
+
+            }
+        }
+        .extra {
+            display: flex;
+            flex-direction: row;
+            align-items:baseline;
+            gap: 45px;
+
+            p:first-child {
+                font-size: 16px;
+                span {
+                    font-size: 13px;
+                    color: var(--gray-color);
+                }
+            }
+            p:last-child {
+                font-size: 13px;
+                color: var(--gray-color);
+            }
+
+        }
+    }
+
+    .pictures {
+        picture {
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: row;
+        gap: 55px;
+
+        .schedule {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .title {
+                p {
+                    font-size: 16px;
+                }
+            }
+            .data {
+                display: flex;
+                flex-direction: row;
+                gap: 24px;
+                p:first-child {
+                    font-size: 14px;
+                }
+                p:last-child {
+                    font-size: 14px;
+                    color: var(--red-color);
+                }
+            }
+        }
+        .address {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            div:nth-child(1) {
+                p {
+                    font-size: 16px;
+                }
+            }
+            div:nth-child(2) {
+                padding: 8px 20px;
+                background-color: var(--purple-color);
+                border-radius: 100px;
+
+                display: flex;
+                align-items: center;
+                p {
+                    font-size: 14px;
+                    color: var(--white-color);
+                }
+            }
+            div:nth-child(3) {
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
