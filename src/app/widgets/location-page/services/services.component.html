@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="title">
+        <img src="../../../../assets/icons/framed-heart.svg" alt="services">
+        <p>Всі послуги</p>
+    </div>
+
+    <div class="content">
+        @for (item of this.location.suggestions; track $index) {
+            <div class="item">
+                <div class="name">
+                    <p>{{item.name}}</p>
+                </div>
+                <div class="price">
+                    <p>{{item.price}} грн</p>
+                    <button>Замовити</button>
+                </div>
+            </div>
+        }
+    </div>
+</div>
