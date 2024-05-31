@@ -1,0 +1,104 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    background-color: var(--white-color);
+    border-radius: 16px;
+
+    p {
+        margin: 0;
+        color: var(--black-color);
+    }
+
+    // * {
+    //     outline: 1px red solid;
+    // }
+    .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 26px 14px 0px;
+        .rating {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            p {
+                font-size: 24px;
+            }
+        }
+        .action {
+            button {
+                padding: 14px 45px;
+
+                color: var(--white-color);
+                background-color: var(--green-color);
+
+                border: none;
+                border-radius: 16px;
+            }
+        }
+    }
+
+    .reviews {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        padding: 0px 14px 14px;
+
+        .review {
+            display: flex;
+            flex-direction: column;
+            gap: 26px;
+
+            background-color: #FFFFFF;
+            border-radius: 8px;
+
+            padding: 14px 26px;
+
+            .user {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 14px;
+
+                .picture {
+                    width: 50px;
+                    height: 50px;
+
+                    .pseudo-picture {
+                        width: 50px;
+                        height: 50px;
+                        background-color: var(--green-color);
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        p {
+                            font-size: 16px;
+                            color: #FFFFFF;
+                        }
+                    }
+                }
+
+                .name {
+                    p {
+                        font-weight: 500;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .impression {
+                p {
+                    font-size: 15px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
