@@ -1,13 +1,18 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { locationService } from './api/location.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { InformationComponent } from "../../widgets/location-page/information/information.component";
+import { ServicesComponent } from "../../widgets/location-page/services/services.component";
+import { ReviewsComponent } from "../../widgets/location-page/reviews/reviews.component";
+import { DescriptionComponent } from "../../widgets/location-page/description/description.component";
+import { RecomendationsComponent } from "../../widgets/location-page/recomendations/recomendations.component";
 
 @Component({
-  selector: 'app-location',
-  standalone: true,
-  imports: [],
-  templateUrl: 'location.component.html',
-  styleUrl: 'location.component.scss'
+    selector: 'app-location',
+    standalone: true,
+    templateUrl: 'location.component.html',
+    styleUrl: 'location.component.scss',
+    imports: [InformationComponent, ServicesComponent, ReviewsComponent, DescriptionComponent, RecomendationsComponent]
 })
 export default class LocationComponent implements OnInit {
   private locationService: locationService = inject(locationService);
