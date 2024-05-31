@@ -102,3 +102,13 @@
         }
     }
 }
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+        .title {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+        }
+    }
+}
