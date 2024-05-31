@@ -1,0 +1,15 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    padding: 90px 80px;
+
+    div {
+        border-bottom: 1px solid var(--light-gray-color);
+        padding-bottom: 16px;
+    }
+    div:last-child {
+        border-bottom: none;
+    }
+}

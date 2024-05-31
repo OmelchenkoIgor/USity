@@ -18,12 +18,14 @@ export default class LocationComponent implements OnInit {
   private locationService: locationService = inject(locationService);
   private router: ActivatedRoute = inject(ActivatedRoute);
 
+  location: any;
+
   ngOnInit() {
     this.router.url.subscribe(url => {
       console.log(url[1].path);
       this.locationService.getLocation(url[1].path).subscribe((data) => {
         console.log(data);
-
+        this.location = data;
       })
     });
   }
