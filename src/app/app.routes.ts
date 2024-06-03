@@ -18,6 +18,10 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/location/location.component')
     },
     {
+        path: 'reference-book',
+        loadComponent: () => import('./pages/reference-book/reference-book.component')
+    },
+    {
         path: 'error404',
         loadComponent: () => import('./pages/error404/error404.component')
     },

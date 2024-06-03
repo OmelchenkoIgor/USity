@@ -1,0 +1,141 @@
+// * {
+//     outline: 1px red solid;
+// }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px;
+
+    p {
+        margin: 0;
+    }
+    .title {
+        padding: 20px 24px;
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+    .information {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            padding: 12px 24px;
+
+            p {
+                flex: 1;
+                font-size: 12px;
+                color: var(--dark-gray-color);
+            }
+            p:first-child {
+                flex: 2;
+            }
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+
+            .item {
+                min-height: 80px;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                div {
+                    display: flex;
+                    align-items: center;
+                    padding: 16px 24px;
+                    p {
+                        font-size: 14px;
+                        color: var(--dark-gray-color);
+                    }
+                }
+
+                .name {
+                    flex: 2;
+                    gap: 12px;
+
+                    .icon {
+                        min-width: 40px;
+                        min-height: 40px;
+                        padding: 0;
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .label {
+                        padding: 0;
+                        p {
+                            color: var(--black-color);
+                        }
+                    }
+                }
+                .address {
+                    flex: 1;
+                }
+                .phone {
+                    flex: 1;
+                }
+                .email {
+                    flex: 1;
+                }
+                .schedule {
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .wrapper {
+        .information {
+            .header {
+                display: none;
+            }
+
+            .content {
+                flex-direction: column;
+                gap: 20px;
+
+                .item {
+                    flex-direction: column;
+
+                    div {
+                        border-bottom: 1px solid var(--light-gray-color);
+                    }
+
+                    .name {
+                        flex: 1;
+                        gap: 12px;
+
+                        .icon {
+                            border: none;
+                        }
+
+                        .label {
+                            border: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrapper {
+        padding: 20px
+    }
+}
