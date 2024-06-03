@@ -45,8 +45,9 @@
     }
 
     .pictures {
-        picture {
+        .picture {
             img {
+                border-radius: 10px;
                 width: 100%;
             }
         }
