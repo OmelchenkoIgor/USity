@@ -1,7 +1,7 @@
 .wrapper {
     height: max-content;
 
-    padding: 15px 50px;
+    padding: 20px 50px;
 
     display: flex;
     justify-content: center;
@@ -58,6 +58,6 @@
 
 @media screen and (max-width: 765px) {
     .wrapper {
-        padding: 10px 15px;
+        padding: 20px 15px;
     }
 }
