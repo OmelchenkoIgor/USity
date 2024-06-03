@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
 
+    user-select: none;
 
     .logo {
         cursor: pointer;
@@ -55,35 +56,43 @@
             }
 
 
-          ul {
-            padding: 0;
+            ul {
+                padding: 0;
 
-            display: none;
-            flex-direction: column;
-            position: absolute;
-            top: 65px;
-            left: 0;
-            right: 0;
-            background-color: #333;
-            z-index: 5;
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                right: 0;
+                background-color: var(--dark-gray-color);
+                z-index: 5;
 
-            li {
-                list-style: none;
-              text-align: center;
+                li {
+                    list-style: none;
+                    text-align: center;
 
-              p {
-                color: var(--white-color);
-              }
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    padding: 12px;
+                    p {
+                        margin: 0;
+
+                        font-size: 16px;
+                        color: var(--white-color);
+                    }
+                }
+
+                li:hover {
+                    background-color: #888888;
+                }
             }
 
-            li:hover {
-                background-color: #888888;
+            ul.active {
+                display: flex;
             }
-          }
-
-          ul.active {
-            display: flex;
-          }
         }
     }
 }

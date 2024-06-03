@@ -83,6 +83,8 @@
                         font-size: 14px;
                         font-weight: 600;
                         color: var(--black-color);
+
+                        user-select: none;
                     }
                 }
                 .forgot-password {
@@ -92,6 +94,7 @@
                         color: var(--purple-color);
 
                         cursor: pointer;
+                        user-select: none;
                     }
                 }
             }
@@ -140,6 +143,9 @@
                     border: none;
                     background-color: rgba($color: #FFFFFF, $alpha: 0);
 
+                    cursor: pointer;
+                    user-select: none;
+
                     .picture {
                         width: 24px;
                         height: 24px;
@@ -160,6 +166,8 @@
                     font-size: 14px;
                     font-weight: 600;
                     color: var(--dark-gray-color);
+
+                    user-select: none;
 
                     span {
                         color: var(--purple-color);
