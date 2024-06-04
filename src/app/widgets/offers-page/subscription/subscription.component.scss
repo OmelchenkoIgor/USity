@@ -1,0 +1,110 @@
+// * {
+//     outline: red solid 1px;
+// }
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        .title {
+            p:first-child {
+                text-align: center;
+                margin: 0;
+
+                font-size: 32px;
+                font-weight: 600;
+                color: var(--black-color);
+            }
+            p:last-child {
+                text-align: center;
+                margin: 0;
+
+                font-size: 20px;
+                color: var(--gray-color);
+            }
+        }
+
+        .action {
+            .field {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+
+                input {
+                    width: 100%;
+                    height: 54px;
+
+                    border: var(--light-gray-color) 1px solid;
+                    border-radius: 8px;
+                }
+
+                p {
+                    display: none;
+                    margin: 0;
+
+                    font-size: 14px;
+                    color: var(--gray-color);
+                    a {
+                        font-size: 14px;
+                        color: var(--gray-color);
+                        text-decoration: underline;
+                    }
+                }
+
+                button {
+                    padding: 17px 45px;
+
+                    line-height: 14px;
+
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--white-color);
+                    background-color: var(--purple-color);
+
+                    border: none;
+                    border-radius: 8px;
+                }
+            }
+
+            .extra-desk {
+                padding-top: 8px;
+
+                p {
+                    margin: 0;
+
+                    font-size: 14px;
+                    color: var(--gray-color);
+                    a {
+                        font-size: 14px;
+                        color: var(--gray-color);
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .wrapper {
+        .content {
+            .action {
+                .field {
+                    flex-direction: column;
+
+                    p {
+                        display: block;
+                    }
+                }
+                .extra-desk {
+                    display: none;
+                }
+            }
+        }
+    }
+}

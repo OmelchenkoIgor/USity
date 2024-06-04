@@ -10,17 +10,21 @@ export const routes: Routes = [
         loadComponent: () => import('./pages/categories/categories.component')
     },
     {
-        path: 'partnership',
-        loadComponent: () => import('./pages/partnership/partnership.component')
-    },
-    {
         path: 'location/:id',
         loadComponent: () => import('./pages/location/location.component')
+    },
+    {
+        path: 'offers',
+        loadComponent: () => import('./pages/offers/offers.component')
     },
     {
         path: 'reference-book',
         loadComponent: () => import('./pages/reference-book/reference-book.component')
     },
+    {
+      path: 'partnership',
+      loadComponent: () => import('./pages/partnership/partnership.component')
+  },
     {
         path: 'error404',
         loadComponent: () => import('./pages/error404/error404.component')
