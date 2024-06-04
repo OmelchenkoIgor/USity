@@ -32,7 +32,7 @@
             <p>Розваги</p>
         </div>
 
-        <div class="item">
+        <div class="item" (click)="changeRoute('/reference-book')">
             <p>Довідник</p>
         </div>
 
@@ -43,20 +43,20 @@
 
     <div class="burger-menu">
         <div class="burger-menu" (click)="toggleMenu()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
-          <ul [class.active]="menuActive">
-            <li><p>Акції та пропозиції</p></li>
-            <li><p>Б'юті індустрія</p></li>
-            <li><p>Право</p></li>
-            <li (click)="changeRoute('/categories?category=all')"><p>Заклади</p></li>
-            <li><p>Підприємства</p></li>
-            <li><p>Майстри</p></li>
-            <li><p>Розваги</p></li>
-            <li><p>Довідник</p></li>
-            <li><p>Співпраця</p></li>
-          </ul>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <ul [class.active]="menuActive">
+                <li><p>Акції та пропозиції</p></li>
+                <li><p>Б'юті індустрія</p></li>
+                <li><p>Право</p></li>
+                <li (click)="changeRoute('/categories?category=all')"><p>Заклади</p></li>
+                <li><p>Підприємства</p></li>
+                <li><p>Майстри</p></li>
+                <li><p>Розваги</p></li>
+                <li (click)="changeRoute('/reference-book')"><p>Довідник</p></li>
+                <li (click)="changeRoute('/partnership')"><p>Співпраця</p></li>
+            </ul>
     </div>
 </div>
