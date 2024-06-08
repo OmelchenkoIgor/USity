@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <div class="news-card">
+        <div class="picture">
+            <img [src]="newsData.image" alt="зображення {{newsData.locationName}} таке типу">
+        </div>
+
+        <div class="content">
+            <p>{{newsData.locationName}}</p>
+            <p>{{newsData.title}}</p>
+            <p>{{newsData.description}}</p>
+            <p>{{newsData.date}}</p>
+        </div>
+        <div class="actions">
+            <button>
+                <p>Перейти на сторінку закладу</p>
+                <img src="../../../assets/icons/link-arrow.svg">
+            </button>
+        </div>
+    </div>
+</div>
