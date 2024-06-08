@@ -1,6 +1,12 @@
 <div class="card">
     <div class="pictures">
-        <img [src]='data().image[0]'>
+        <nz-carousel nzEffect="scrollx">
+            @for (cartImage of data().image; track $index) {
+              <div nz-carousel-content>
+                <img [src]='cartImage'>
+              </div>
+            }
+        </nz-carousel>
     </div>
     <div class="info">
         <div class="info_description">

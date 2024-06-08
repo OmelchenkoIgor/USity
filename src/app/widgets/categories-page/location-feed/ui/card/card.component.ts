@@ -1,10 +1,11 @@
 import { Component, InputSignal, inject, input } from '@angular/core';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [],
+  imports: [NzCarouselModule],
   templateUrl: 'card.component.html',
   styleUrl: 'card.component.scss'
 })
@@ -15,5 +16,5 @@ export class CardComponent {
   redirectToLocation(id: string) {
     console.log(['/location', id])
     this.router.navigate(['/location', id]);
-  }  
+  }
 }

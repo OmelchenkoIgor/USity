@@ -7,18 +7,26 @@
     border: 1px solid var(--light-gray-color);
 
     .pictures {
-        width: 30%;
+        width: 40%;
 
-        max-height: 550px;
+        nz-carousel{
+            height: 400px;
 
-        display: flex;
-        flex: 1;
+            [nz-carousel-content] {
+                width: 100%;
+                height: auto;
+                max-height: 100vh;
+                overflow: hidden;
 
-        img {
-            width: 100%;
-            object-fit: cover;
+                background: var(--main-color);
+                color: #000000;
 
-            border-radius: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
         }
     }
 
