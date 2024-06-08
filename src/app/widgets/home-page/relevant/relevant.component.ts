@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: 'relevant.component.scss'
 })
 export class RelevantComponent {
-
+  changeRoute(route: string) {
+    window.location.href = route;
+  }
 }

@@ -4,7 +4,7 @@
     </div>
 
     <div class="navigation">
-        <div class="item">
+        <div class="item" (click)="changeRoute('/offers')">
             <p>Акції та пропозиції</p>
         </div>
 
@@ -48,7 +48,7 @@
                 <div class="line"></div>
             </div>
             <ul [class.active]="menuActive">
-                <li><p>Акції та пропозиції</p></li>
+                <li (click)="changeRoute('/offers')"><p>Акції та пропозиції</p></li>
                 <li><p>Б'юті індустрія</p></li>
                 <li><p>Право</p></li>
                 <li (click)="changeRoute('/categories?category=all')"><p>Заклади</p></li>
