@@ -49,10 +49,22 @@
                     font-weight: 600;
                     color: var(--purple-color);
                 }
-                p:nth-child(2) {
-                    font-size: 24px;
-                    font-weight: 600;
-                    color: var(--black-color);
+                .title {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    cursor: pointer;
+
+                    p {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: var(--black-color);
+                    }
+                    img {
+                        width: 10px;
+                        height: 10px;
+                    }
                 }
                 p:nth-child(3) {
                     font-size: 16px;
