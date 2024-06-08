@@ -9,10 +9,128 @@
     .title {
         p {
             font-size: 24px;
+            font-weight: 600;
             color: var(--black-color);
         }
     }
     .content {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
 
+        .content-wrapper {
+            width: 49%;
+
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                .picture {
+                    width: 100%;
+                    height: 200px;
+
+                    img {
+                        width: 100%;
+                        height: 200px;
+                        object-fit: cover;
+
+                        border-radius: 8px;
+                    }
+                }
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+
+                    p:nth-child(1) {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--purple-color);
+                    }
+                    p:nth-child(2) {
+                        font-size: 24px;
+                        font-weight: 600;
+                        color: var(--black-color);
+                    }
+                    p:nth-child(3) {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: var(--gray-color);
+                    }
+                    p:nth-child(4) {
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: var(--pastel-blue-color);
+                    }
+                }
+            }
+
+            .card2 {
+                display: flex;
+                flex-direction: row;
+
+                .picture {
+                    width: 50%;
+                    max-width: 320px;
+                }
+                .description {
+                    width: 50%;
+
+                    p:nth-child(2) {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        .content {
+            flex-direction: column;
+            .content-wrapper {
+                width: 100%;
+                .card {
+                    width: 100%;
+                }
+                .card2 {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .wrapper {
+        .content {
+            .content-wrapper {
+                .card2 {
+                    flex-direction: column;
+                    .picture {
+                        width: 100%;
+                        max-width: 100%;
+                        height: 200px;
+
+                        img {
+                            width: 100%;
+                            height: 200px;
+                            object-fit: cover;
+
+                            border-radius: 8px;
+                        }
+                    }
+                    .description {
+                        width: 100%;
+                    }
+                }
+            }
+        }
     }
 }
