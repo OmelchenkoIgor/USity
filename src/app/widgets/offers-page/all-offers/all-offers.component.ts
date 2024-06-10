@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, WritableSignal, effect, inject, signal } from '@angular/core';
+import { newsService } from './api/news.service';
 
 @Component({
   selector: 'app-all-offers',
@@ -8,5 +9,20 @@ import { Component } from '@angular/core';
   styleUrl: 'all-offers.component.scss'
 })
 export class AllOffersComponent {
+  private newsService: newsService = inject(newsService);
 
+  newsList: WritableSignal<any> = signal(null);
+
+  constructor() {
+    effect(() => {
+      this.newsService.getNewsList().subscribe((response) => {
+        this.newsList.set(response);
+        console.log(response);
+      })
+    })
+  }
+
+  changeRoute(route: string) {
+    window.location.href = "news/" + route;
+  }
 }
