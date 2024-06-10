@@ -1,17 +1,17 @@
 <div class="wrapper">
     <div class="news-card">
         <div class="picture">
-            <img [src]="newsData.image" alt="зображення {{newsData.locationName}} таке типу">
+            <img [src]="newsData().image" alt="зображення {{newsData().name}} таке типу">
         </div>
 
         <div class="content">
-            <p>{{newsData.locationName}}</p>
-            <p>{{newsData.title}}</p>
-            <p>{{newsData.description}}</p>
-            <p>{{newsData.date}}</p>
+            <p>{{newsData().name}}</p>
+            <p>{{newsData().title}}</p>
+            <p>{{newsData().info}}</p>
+            <p>{{newsData().date}}</p>
         </div>
         <div class="actions">
-            <button>
+            <button (click)="changeRoute(newsData().link)">
                 <p>Перейти на сторінку закладу</p>
                 <img src="../../../assets/icons/link-arrow-white.svg">
             </button>
