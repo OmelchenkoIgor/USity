@@ -34,7 +34,7 @@
                         </div>
 
                         <div class="action">
-                            <button>
+                            <button (click)="redirectToLocation(data()._id)">
                                 {{ data().type === "Кав'ярня" ? "Замовити" : "Записатись" }}
                             </button>
                         </div>
