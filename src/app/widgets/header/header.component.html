@@ -8,19 +8,19 @@
             <p>Акції та пропозиції</p>
         </div>
 
-        <div class="item">
+        <!-- <div class="item">
             <p>Б'юті індустрія</p>
         </div>
 
         <div class="item">
             <p>Право</p>
-        </div>
+        </div> -->
 
         <div class="item" (click)="changeRoute('/categories?category=all')">
             <p>Заклади<p>
         </div>
 
-        <div class="item">
+        <!-- <div class="item">
             <p>Підприємства</p>
         </div>
 
@@ -30,7 +30,7 @@
 
         <div class="item">
             <p>Розваги</p>
-        </div>
+        </div> -->
 
         <div class="item" (click)="changeRoute('/reference-book')">
             <p>Довідник</p>
@@ -49,12 +49,12 @@
             </div>
             <ul [class.active]="menuActive">
                 <li (click)="changeRoute('/offers')"><p>Акції та пропозиції</p></li>
-                <li><p>Б'юті індустрія</p></li>
-                <li><p>Право</p></li>
+                <!-- <li><p>Б'юті індустрія</p></li>
+                <li><p>Право</p></li> -->
                 <li (click)="changeRoute('/categories?category=all')"><p>Заклади</p></li>
-                <li><p>Підприємства</p></li>
+                <!-- <li><p>Підприємства</p></li>
                 <li><p>Майстри</p></li>
-                <li><p>Розваги</p></li>
+                <li><p>Розваги</p></li> -->
                 <li (click)="changeRoute('/reference-book')"><p>Довідник</p></li>
                 <li (click)="changeRoute('/partnership')"><p>Співпраця</p></li>
             </ul>
