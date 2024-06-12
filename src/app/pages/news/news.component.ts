@@ -20,7 +20,6 @@ export default class NewsComponent {
       this.newsService.getNewsData(url[1].path).subscribe(
         response => {
           this.newsData.set(response);
-          console.log(response);
         }
       )
     });
